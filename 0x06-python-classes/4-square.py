@@ -9,7 +9,7 @@ class Square:
         args:
             size: the size of new square
         """
-        self.size = size
+        self.__size = size
 
     """get size"""
     @property
