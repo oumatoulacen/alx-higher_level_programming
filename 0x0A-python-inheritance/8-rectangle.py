@@ -1,26 +1,19 @@
 #!/usr/bin/python3
-'''Write a class BaseGeometry'''
+"""Geometry module """
 
 
-class BaseGeometry():
-    '''BaseGeometry class'''
-    def area(self):
-        '''aises an Exception'''
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        '''validates value'''
-        if type(value) is not int:
-            raise TypeError("{:s} must be an integer".format(name))
-        elif value <= 0:
-            raise ValueError("{:s} must be greater than 0".format(name))
-
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 '''Write a class Rectangle'''
 
 
 class Rectangle(BaseGeometry):
-    '''Rectangle class'''
+    """
+    A class inherits the BaseGeometry class
+    Private instance attributes:
+        -width
+        -height
+    """
     def __init__(self, width, height):
         self.integer_validator("width", width)
         self.integer_validator("height", height)
