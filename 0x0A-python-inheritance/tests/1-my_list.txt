@@ -35,5 +35,5 @@ lets use it:
 
 >>> new_list
 []
->>> new_l.print_sorted()
+>>> new_list.print_sorted()
 []
