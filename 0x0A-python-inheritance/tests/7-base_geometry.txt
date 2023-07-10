@@ -1,12 +1,15 @@
-===============================================
-the ``7-base_geometry`` module
-===============================================
-import the BaseGeometry class:
+=============================
+The ``7-base_geometry`` module
+=============================
 
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Using ``BaseGeometry``
+---------------------
 
------------------------------------------------
-lets test it:
+Import the class:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now test it:
 
 >>> bg = BaseGeometry()
 
