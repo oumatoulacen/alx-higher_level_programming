@@ -31,7 +31,9 @@ lets use it:
 ['h', 'e', 'l', 'l', 'o']
 >>> my_list.print_sorted()
 ['e', 'h', 'l', 'l', 'o']
->>> new_l = MyList()
+>>> new_list = MyList()
 
+>>> new_list
+[]
 >>> new_l.print_sorted()
 []
