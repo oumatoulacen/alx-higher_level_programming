@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-''' check wither an object is an instance of, or if the object is an instance of a
+''' check wither an object is an instance of,
+or if the object is an instance of a
 class that inherited from, the specified class'''
 
 
