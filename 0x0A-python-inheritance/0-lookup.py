@@ -2,4 +2,4 @@
 
 def lookup(obj):
     '''lists all the attributes and methods of an object'''
-    return dir(obj)
+    return sorted(dir(obj))
