@@ -2,14 +2,13 @@
 the Module:
 	``1-my_list``
 ===============================================
-Using ``MyList`` for testing
+Using: ``MyList``
 -----------------------------------------------
 
 Import the class:
 >>> MyList = __import__("1-my_list").MyList
 
------------------------------------------------
-lets use it:
+lets test it:
 
 >>> my_list = MyList()
 
