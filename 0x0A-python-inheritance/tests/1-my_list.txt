@@ -31,12 +31,12 @@ lets use it:
 ['h', 'e', 'l', 'l', 'o']
 >>> my_list.print_sorted()
 ['e', 'h', 'l', 'l', 'o']
->>> my_list = MyList([5, 4, 2])
+>>> my_list = MyList([1, 4, 2, 3, 5])
 
 >>> my_list
-[5, 4, 2]
+[1, 4, 2, 3, 5]
 >>> my_list.print_sorted()
-[2, 4, 5]
+[1, 2, 3, 4, 5]
 >>> new_list = MyList()
 
 >>> new_list
