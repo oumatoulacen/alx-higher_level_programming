@@ -4,7 +4,7 @@ and then save them to a file'''
 
 
 import sys
-'''os module'''
+'''sys module'''
 
 
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
