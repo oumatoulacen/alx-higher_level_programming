@@ -3,10 +3,6 @@
 after each line containing a specific string '''
 
 
-import os
-'''os module'''
-
-
 def append_after(filename="", search_string="", new_string=""):
     '''inserts a line of text to a file
     after each line containing a specific string'''
@@ -22,5 +18,3 @@ def append_after(filename="", search_string="", new_string=""):
         file_data = temp_file.read()
     with open(filename, 'w') as file:
         file.write(file_data)
-
-    os.remove(temp_filename)
