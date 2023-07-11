@@ -3,16 +3,16 @@
 and then save them to a file'''
 
 
+import sys
+'''os module'''
+
+
 save_to_json_file = __import__("5-save_to_json_file").save_to_json_file
 '''save to json file module'''
 
 
 load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
 '''load from json file module'''
-
-
-import sys
-'''os module'''
 
 
 try:
