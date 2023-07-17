@@ -10,16 +10,15 @@ import turtle
 
 class Base:
     '''the “base” of all other classes in this project'''
-
-
     __nb_objects = 0
+
     def __init__(self, id=None):
         if id is not None:
             self.id = id
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
-    
+
     @staticmethod
     def to_json_string(list_dictionaries):
         '''returns the JSON string representation of list_dictionaries'''
@@ -40,14 +39,14 @@ class Base:
     def save_to_file(cls, list_objs):
         '''writes the JSON string representation of list_objs to a file:'''
         f_name = cls.__name__ + ".json"
-        
+
         with open(f_name, "w") as f:
             if list_objs is None:
                 f.write("[]")
             else:
                 list_dicts = [obj.to_dictionary() for obj in list_objs]
                 f.write(cls.to_json_string(list_dicts))
-    
+
     @classmethod
     def create(cls, **dictionary):
         """Returns an instance with all attributes already set"""
@@ -108,7 +107,7 @@ class Base:
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
             return []
-    
+
     @staticmethod
     def draw(list_rectangles, list_squares):
         """Draw Rectangles and Squares using the turtle module.
