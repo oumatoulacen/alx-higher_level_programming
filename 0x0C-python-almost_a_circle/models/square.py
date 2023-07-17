@@ -20,9 +20,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
-        self.width = value
-        self.height = value
-
+        self.__size = value
     def update(self, *args, **kwargs):
         '''update attributes'''
         if len(args) > 0:
