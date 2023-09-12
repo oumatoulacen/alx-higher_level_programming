@@ -27,7 +27,9 @@ class Square extends Rectangle {
   }
 
   charPrint (c) {
-    if (c === undefined) c = 'X';
+    if (c === undefined) {
+      c = 'X';
+    }
     for (let i = 0; i < this.height; i++) {
       let a = '';
       for (let j = 0; j < this.height; j++) {
