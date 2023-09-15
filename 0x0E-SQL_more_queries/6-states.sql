@@ -5,6 +5,6 @@ CREATE DATABASE IF NOT EXISTS hbtn_0d_usa;
 USE hbtn_0d_usa;
 
 CREATE TABLE IF NOT EXIST states (
-	id INT UNIQUE primaty key auto_increment;
-	name VARCHAR(256) not NULL
+	id INT NOT NULL PRIMARY KEY AUTO_INCTEMENT;
+	name VARCHAR(256) NOT NULL
 	);
