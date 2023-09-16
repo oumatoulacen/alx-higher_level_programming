@@ -5,10 +5,6 @@ import MySQLdb
 import sys
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: python script.py <username> <password> <database>")
-        sys.exit(1)
-
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
@@ -23,7 +19,8 @@ if __name__ == "__main__":
             charset="utf8"
             )
     cur = conn.cursor()
-    query = "SELECT * FROM states WHERE name='{}' ORDER BY id ASC".format(stt)
+    query = "SELECT * FROM states WHERE BINARY name='{}' \
+            ORDER BY id ASC".format(stt)
     cur.execute(query)  # HERE I have to know
     # SQL to grab all states in my database
     query_rows = cur.fetchall()
