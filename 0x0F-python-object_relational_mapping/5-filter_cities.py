@@ -27,6 +27,6 @@ if __name__ == "__main__":
     res = ''
     for row in query_rows:
         res += f"{row[0]}, "
-    print(res)
+    print(res[:-2])
     cur.close()
     conn.close()
