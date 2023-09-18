@@ -1,14 +1,21 @@
 #!/usr/bin/python3
-"""contains the class definition of a State and an instance Base
 """
-from sqlalchemy import Column, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import sessionmaker
+First State Model
+"""
 
-Base = declarative_base()
+from sqlalchemy import Column, String, Integer, MetaData
+from sqlalchemy.ext.declarative import declarative_base
+
+mymetadata = MetaData()
+Base = declarative_base(metadata=mymetadata)
 
 
 class State(Base):
+    """
+    Class with id and name attributes of each state
+    """
+
     __tablename__ = 'states'
-    id = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
+
+    id = Column(Integer, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
