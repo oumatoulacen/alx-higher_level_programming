@@ -14,3 +14,4 @@ def find_peak(list_of_integers):
             next = 0
         if num >= prev and num >= next:
             return num
+
