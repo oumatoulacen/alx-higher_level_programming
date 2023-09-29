@@ -9,10 +9,9 @@ finally displays the body of the response.
 import sys
 import requests
 
-url = sys.argv[1]
-email = sys.argv[2]
-data = {"email": email}
-
 if __name__ == "__main__":
-        response = requests.post(url, data=data)
-        print(response.text)
+    url = sys.argv[1]
+    email = sys.argv[2]
+    data = {"email": email}
+    response = requests.post(url, data=data).text
+    print(response)
