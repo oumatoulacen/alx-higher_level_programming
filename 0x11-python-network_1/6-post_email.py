@@ -9,5 +9,5 @@ finally displays the body of the response.
 import sys
 import requests
 
-req = requests.post(sys.argv[1], data=sys.argv[2])
+req = requests.post(sys.argv[1], data={"email": sys.argv[2]})
 print(res.text)
