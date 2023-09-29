@@ -10,9 +10,7 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    q = ""
-    if len(sys.argv) == 2:
-        q = sys.argv[1]
+    q = sys.argv[1] ? len(sys.argv) == 2 : ""
     data = {"q": q}
     req = requests.post("http://0.0.0.0:5000/search_user", data=data)
     try:
