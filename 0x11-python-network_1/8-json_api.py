@@ -11,14 +11,14 @@ import requests
 
 if __name__ == "__main__":
     q = ""
-    if sys.argv[1]:
+    if len(sys.argv) >= 2:
         q = sys.argv[1]
     data = {"q": q}
     req = requests.post("http://0.0.0.0:5000/search_user", data=data)
-    js = re.json()
+    js = req.json()
     if js == "":
         print("No result")
-    else if type(js) == dict:
+    elif type(js) == dict:
         print(f"[{js.id}]: {js.name}")
     else:
         print("Not a valid JSON")
