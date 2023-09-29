@@ -11,14 +11,14 @@ import requests
 
 if __name__ == "__main__":
     q = ""
-    if len(sys.argv) >= 2:
+    if len(sys.argv) == 2:
         q = sys.argv[1]
     data = {"q": q}
     req = requests.post("http://0.0.0.0:5000/search_user", data=data)
     try:
         jsn = req.json()
         if jsn:
-            print(f"[{js.id}]: {js.name}")
+            print(f"[{jsn.id}]: {jsn.name}")
         else:
             print("No result"
     except ValueError:
