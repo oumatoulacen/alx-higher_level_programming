@@ -12,7 +12,7 @@ url = sys.argv[1]
 
 try:
     with urllib.request.urlopen(url) as response:
-        request_id = response.headers['X-Request-Id']
+        request_id = response.header['X-Request-Id']
         print(request_id)
 except urllib.error.URLError as e:
     print("Error:", e)
