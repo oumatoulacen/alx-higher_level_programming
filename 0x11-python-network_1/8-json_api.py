@@ -11,8 +11,7 @@ import requests
 
 if __name__ == "__main__":
     q = sys.argv[1] ? len(sys.argv) == 2 : ""
-    data = {"q": q}
-    req = requests.post("http://0.0.0.0:5000/search_user", data=data)
+    req = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
     try:
         jsn = req.json()
         if jsn:
