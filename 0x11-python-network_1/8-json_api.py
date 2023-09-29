@@ -18,7 +18,7 @@ if __name__ == "__main__":
     try:
         jsn = req.json()
         if jsn:
-            print(f"[{jsn.id}]: {jsn.name}")
+            print(f"[{jsn.get('id')}]: {jsn.get('name')}")
         else:
             print("No result"
     except ValueError:
