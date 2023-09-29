@@ -8,10 +8,10 @@ the header of the response.
 import urllib.request
 import sys
 
-try:
+if __name__ == "__main__":
     url = sys.argv[1]
     with urllib.request.urlopen(url) as response:
-        request_id = response.headers['X-Request-Id']
+        request_id = response.info().get('X-Request-Id')
         print(request_id)
 except urllib.error.URLError as e:
     print("Error:", e)
