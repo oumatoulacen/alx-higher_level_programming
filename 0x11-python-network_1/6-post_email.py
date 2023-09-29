@@ -9,5 +9,13 @@ finally displays the body of the response.
 import sys
 import requests
 
-req = requests.post(sys.argv[1], data={"email": sys.argv[2]})
-print(res.text)
+url = sys.argv[1]
+email = sys.argv[2]
+data = {"email": email}
+
+try:
+    response = requests.post(url, data=data)
+    print(response.text)
+
+except requests.exceptions.RequestException as e:
+    print("Error:", e)
