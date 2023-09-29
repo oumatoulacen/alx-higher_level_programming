@@ -13,9 +13,10 @@ url = sys.argv[1]
 email = sys.argv[2]
 data = {"email": email}
 
-try:
-    response = requests.post(url, data=data)
-    print(response.text)
+if __name__ == "__main__":
+    try:
+        response = requests.post(url, data=data)
+        print(response.text)
 
-except requests.exceptions.RequestException as e:
-    print("Error:", e)
+    except requests.exceptions.RequestException as e:
+        print("Error:", e)
