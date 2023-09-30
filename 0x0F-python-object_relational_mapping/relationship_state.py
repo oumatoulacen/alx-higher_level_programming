@@ -18,7 +18,7 @@ class State(Base):
 
     __tablename__ = 'states'
 
-    id = Column(Integer, primary_key=True, nullable=False)
+    id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
     cities = relationship(
             "City", overlaps="state",
