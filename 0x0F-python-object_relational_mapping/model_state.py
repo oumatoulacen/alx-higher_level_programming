@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.orm import declarative_base
 '''Write a python file that contains the class definition
 of a State and an instance Base'''
-
+metadata = MetaData()
 Base = declarative_base()
 
 
