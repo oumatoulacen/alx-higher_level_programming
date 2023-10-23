@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+'''Write a python file that contains the class definition'''
+
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.orm import declarative_base
-'''Write a python file that contains the class definition'''
+
 metadata = MetaData()
 Base = declarative_base()
 
