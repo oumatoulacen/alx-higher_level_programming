@@ -1,25 +1,22 @@
 #!/usr/bin/python3
 """
-First State Model
+define a state module that contains State Model
 """
 
-from sqlalchemy import Column, String, Integer, MetaData
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, String, Integer
+from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import relationship
 
-mymetadata = MetaData()
-Base = declarative_base(metadata=mymetadata)
+Base = declarative_base()
 
 
 class State(Base):
     """
     Class with id and name attributes of each state
     """
-
     __tablename__ = 'states'
-
     id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
     name = Column(String(128), nullable=False)
     cities = relationship(
-            "City", overlaps="state",
-            cascade="all, delete")
+            "City", backref="state",
+            cascade="all, delete-orphan")
