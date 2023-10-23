@@ -12,8 +12,7 @@ if __name__ == '__main__':
 
     # Connect to the database
     engine = create_engine(
-        f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}",
-        pool_pre_ping=True
+        f"mysql+mysqldb://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
     )
 
     Base.metadata.create_all(engine)
