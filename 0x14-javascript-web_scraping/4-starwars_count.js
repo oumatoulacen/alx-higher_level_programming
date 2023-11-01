@@ -16,7 +16,9 @@ request.get(ApiUrl, (error, response, body) => {
     const data = JSON.parse(body).results;
     let num = 0;
     data.forEach(element => {
-      if (element.characters.includes(UrlChar)) num++;
+      if (element.characters.includes(UrlChar)) {
+        num++;
+      }
     });
     console.log(num);
   }
