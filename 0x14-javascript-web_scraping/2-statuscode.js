@@ -7,10 +7,10 @@ The status code must be printed like this: code: <status code>
 You must use the module request
 */
 
-const request = require("request");
+const request = require('request');
 
 request.get(process.argv[2], (error, response, body) => {
   if (!error) {
-    console.log("code: " + response.status);
+    console.log('code: ' + response.status);
   }
-})
+});
