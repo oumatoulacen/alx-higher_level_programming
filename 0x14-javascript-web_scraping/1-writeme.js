@@ -9,10 +9,10 @@ if (!filepath) {
   process.exit(1);
 }
 
-fs.writeFile(filepath, content, 'utf8', (err, result) => {
+fs.writeFile(filepath, content, 'utf8', (err) => {
   if (err) {
     console.log(err);
   } else {
-    console.log(result);
+    console.log(content);
   }
 });
