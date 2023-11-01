@@ -8,21 +8,38 @@ Wedge Antilles is character ID 18 - your script must use this ID for filtering t
 You must use the module request
 */
 
+const args = process.argv;
 const request = require('request');
-const ApiUrl = process.argv[2];
-const UrlChar = 'https://swapi-api.alx-tools.com/api/people/18/';
 
-request.get(ApiUrl, (error, response, body) => {
-  if (!error && response.statusCode === 200) {
-    const data = JSON.parse(body).results;
-    let num = 0;
-    data.forEach(element => {
-      if (element.characters.includes(UrlChar)) {
-        num++;
-      }
-    });
-    console.log(num);
+request(args[2], (err, code, body) => {
+  if (err) {
+    console.error(err);
   } else {
-    console.log(error);
+    let n = 0;
+    for (const film in JSON.parse(body).results) {
+      for (const character in JSON.parse(body).results[film].characters) {
+        if (JSON.parse(body).results[film].characters[character].includes('18')) { n += 1; }
+      }
+    }
+    console.log(n);
   }
 });
+
+// const request = require('request');
+// const ApiUrl = process.argv[2];
+// const UrlChar = 'https://swapi-api.alx-tools.com/api/people/18/';
+
+// request.get(ApiUrl, (error, response, body) => {
+//   if (!error && response.statusCode === 200) {
+//     const data = JSON.parse(body).results;
+//     let num = 0;
+//     data.forEach(element => {
+//       if (element.characters.includes(UrlChar)) {
+//         num++;
+//       }
+//     });
+//     console.log(num);
+//   } else {
+//     console.log(error);
+//   }
+// });
