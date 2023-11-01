@@ -11,6 +11,7 @@ You must use the module request
 const request = require('request');
 const ApiUrl = process.argv[2];
 const UrlChar = 'https://swapi-api.alx-tools.com/api/people/18/';
+
 request.get(ApiUrl, (error, response, body) => {
   if (!error && response.statusCode === 200) {
     const data = JSON.parse(body).results;
@@ -21,5 +22,7 @@ request.get(ApiUrl, (error, response, body) => {
       }
     });
     console.log(num);
+  } else {
+    console.log(error);
   }
 });
